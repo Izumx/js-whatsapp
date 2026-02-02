@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      img {
+        width: 32px;
+        height: 32px;
+      }
+      .bb img {
+        width: 500px;
+        height: 500px;
+      }
+      .menu img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body class="flex min-h-screen bg-[#1c1e1e]">
+    <aside class="flex flex-col justify-between items-center p-3">
+      <div class="flex flex-col gap-3">
+        <img src="chat-line-svgrepo-com(1).svg" alt="" />
+        <img src="call-receive-svgrepo-com.svg" alt="" />
+        <img src="chat-circle-check-svgrepo-com.svg" alt="" />
+        <img src="add-plus-circle-svgrepo-com.svg" alt="" />
+        <img src="group-svgrepo-com.svg" alt="" />
+        <hr />
+        <img src="store-2-svgrepo-com.svg" alt="" />
+        <img src="circle-heat-svgrepo-com.svg" alt="" />
+      </div>
+      <div class="flex flex-col gap-3">
+        <img src="gallery-svgrepo-com.svg" alt="" />
+        <hr />
+        <img src="settings-svgrepo-com.svg" alt="" />
+        <img src="avatar-default-svgrepo-com.svg" alt="" />
+      </div>
+    </aside>
+    <main class="bg-[#151616] rounded-lg text-gray-900">
+      <aside class="p-3">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl text-white">Chats</h1>
+          <div class="flex">
+            <img src="chat-circle-add-svgrepo-com(1).svg" alt="" />
+            <img src="menu-vertical-svgrepo-com.svg" alt="" id="menu-btn" />
+          </div>
+        </div>
+        <div
+          class="bg-[#1e1f1f] absolute rounded-xl p-4 left-80 hidden"
+          id="menu-overlay"
+        >
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="store-2-svgrepo-com.svg" alt="" /><span
+              >Instruments for business</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="group-svgrepo-com.svg" alt="" /><span>New Group</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="ad-announcement-megaphone-svgrepo-com.svg" alt="" /><span
+              >Facebook ad</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="view-boxes-svgrepo-com.svg" alt="" /><span>Catalog</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="thunder-svgrepo-com.svg" alt="" /><span
+              >Fast answers</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="favorite-svgrepo-com.svg" alt="" /><span
+              >Favorite messages</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="bookmark-svgrepo-com.svg" alt="" /><span>Tab</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="chat-remove-svgrepo-com.svg" alt="" /><span
+              >Messages</span
+            >
+          </div>
+          <hr class="border-1 border-black my-2" />
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="lock-alt-svgrepo-com.svg" alt="" /><span>Lock app</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="exit-svgrepo-com.svg" alt="" /><span>Exit</span>
+          </div>
+        </div>
+        <div
+          class="bg-[#2c2d2d] flex rounded-lg mt-3 w-full h-13 items-center p-2"
+        >
+          <img src="search-svgrepo-com.svg" alt="" />
+          <input
+            type="text"
+            placeholder="Search or New chat"
+            class="text-white"
+          />
+        </div>
+        <div class="flex gap-3 my-2 mt-4">
+          <button
+            class="border border-white bg-[#222424] w-15 rounded-lg text-center text-white"
+          >
+            All
+          </button>
+          <button
+            class="border border-white bg-[#222424] w-18 rounded-lg text-center text-white"
+          >
+            Groups
+          </button>
+          <button
+            class="border border-white bg-[#222424] w-20 rounded-lg text-center text-white"
+          >
+            Favorite
+          </button>
+        </div>
+        <div class="flex flex-col gap-3 mt-4">
+          <div class="bg-[#2c2d2d] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu-overlay");
+
+      btn.onclick = () => {
+        menu.classList.toggle("hidden");
+      };
+    </script>
+  </body>
+</html>
