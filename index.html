@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      img {
+        width: 32px;
+        height: 32px;
+        filter: brightness(0) invert(0.7);
+      }
+
+      .bb img {
+        width: 500px;
+        height: 500px;
+      }
+
+      .menu img {
+        width: 24px;
+        height: 24px;
+      }
+      .r-menu-overlay img{
+        width: 16px;
+      }
+      .menu-overlay img{
+        width: 16px;
+      }
+    </style>
+  </head>
+
+  <body class="flex min-h-screen bg-[#1c1e1e]">
+    <aside class="flex flex-col justify-between items-center p-3">
+      <div class="flex flex-col gap-3">
+        <img src="chat-line-svgrepo-com(1).svg" alt="" />
+        <img src="call-receive-svgrepo-com.svg" alt="" />
+        <img src="chat-circle-check-svgrepo-com.svg" alt="" />
+        <img src="add-plus-circle-svgrepo-com.svg" alt="" />
+        <img src="group-svgrepo-com.svg" alt="" />
+        <hr />
+        <img src="store-2-svgrepo-com.svg" alt="" />
+        <img src="circle-heat-svgrepo-com.svg" alt="" />
+      </div>
+      <div class="flex flex-col gap-3">
+        <img src="gallery-svgrepo-com.svg" alt="" />
+        <hr />
+        <img src="settings-svgrepo-com.svg" alt="" />
+        <img src="avatar-default-svgrepo-com.svg" alt="" />
+      </div>
+    </aside>
+    <main class="bg-[#151616] rounded-lg text-gray-900">
+      <aside class="p-3">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl text-white">Chats</h1>
+          <div class="flex">
+            <img src="chat-circle-add-svgrepo-com(1).svg" alt="" />
+            <img src="menu-vertical-svgrepo-com.svg" alt="" id="menu-btn" />
+          </div>
+        </div>
+        <div
+          class="bg-[#1e1f1f] absolute rounded-xl p-4 left-80 hidden"
+          id="menu-overlay"
+        >
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="store-2-svgrepo-com.svg" alt="" /><span
+              >Instruments for business</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="group-svgrepo-com.svg" alt="" /><span>New Group</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="ad-announcement-megaphone-svgrepo-com.svg" alt="" /><span
+              >Facebook ad</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="view-boxes-svgrepo-com.svg" alt="" /><span>Catalog</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="thunder-svgrepo-com.svg" alt="" /><span
+              >Fast answers</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="favorite-svgrepo-com.svg" alt="" /><span
+              >Favorite messages</span
+            >
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="bookmark-svgrepo-com.svg" alt="" /><span>Tab</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="chat-remove-svgrepo-com.svg" alt="" /><span
+              >Messages</span
+            >
+          </div>
+          <hr class="border-1 border-black my-2" />
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="lock-alt-svgrepo-com.svg" alt="" /><span>Lock app</span>
+          </div>
+          <div class="flex text-[#838381] items-center gap-2">
+            <img src="exit-svgrepo-com.svg" alt="" /><span>Exit</span>
+          </div>
+        </div>
+        <div
+          class="bg-[#2c2d2d] flex rounded-lg mt-3 w-full h-13 items-center p-2 gap-2"
+        >
+          <img src="search-svgrepo-com.svg" alt="" style="width: 16px;"/>
+          <input
+            type="text"
+            placeholder="Search or New chat"
+            class="text-white"
+          />
+        </div>
+        <div class="flex gap-3 my-2 mt-4">
+          <button
+            class="border border-white bg-[#222424] w-15 rounded-lg text-center text-white"
+          >
+            All
+          </button>
+          <button
+            class="border border-white bg-[#222424] w-18 rounded-lg text-center text-white"
+          >
+            Groups
+          </button>
+          <button
+            class="border border-white bg-[#222424] w-20 rounded-lg text-center text-white"
+          >
+            Favorite
+          </button>
+        </div>
+        <div class="flex flex-col gap-3 mt-4">
+          <div class="bg-[#2c2d2d] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" class="mr-3" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                  style="width: 16px"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" class="mr-3" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                  style="width: 16px"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" class="mr-3" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                  style="width: 16px"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" class="mr-3" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                  style="width: 16px"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" class="mr-3" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                  style="width: 16px"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" class="mr-3" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                  style="width: 16px"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#151616] flex items-center p-3 rounded-xl">
+            <img src="avatar-default-svgrepo-com.svg" alt="" class="mr-3" />
+            <div>
+              <h1 class="text-1xl text-white">Eskendyr(You)</h1>
+              <div class="flex items-center">
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-2 h-2"
+                  style="width: 16px"
+                />
+                <p class="text-sm text-[#838381]">
+                  The Practical Guide to Design...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <section class="flex-1 flex flex-col bg-[#0b0d0d] rounded-r-lg">
+      <div
+        class="bg-[#1e1f1f] p-4 flex items-center justify-between border-b border-[#2c2d2d]"
+      >
+        <div class="flex items-center gap-3">
+          <img src="avatar-default-svgrepo-com.svg" alt="" class="w-10 h-10" />
+          <div>
+            <h2 class="text-white font-medium">Eskendyr (You)</h2>
+            <p class="text-xs text-[#838381]">Последнен раз здeсь сейчас</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img src="search-svgrepo-com.svg" alt="" />
+          <img src="menu-vertical-svgrepo-com.svg" alt="" id="r-menu-btn" />
+        </div>
+      </div>
+      <div
+        class="bg-[#1e1f1f] absolute rounded-xl p-4 mt-15 right-10 hidden"
+        id="r-menu-overlay"
+      >
+        <div class="flex text-[#838381] items-center gap-2">
+          <img src="info-circle-svgrepo-com.svg" alt="" /><span
+            >Information</span
+          >
+        </div>
+        <div class="flex text-[#838381] items-center gap-2">
+          <img src="select-multiple-svgrepo-com.svg" alt="" /><span
+            >Select message</span
+          >
+        </div>
+        <div class="flex text-[#838381] items-center gap-2">
+          <img src="time-svgrepo-com.svg" alt="" /><span>Timeout messages</span>
+        </div>
+        <div class="flex text-[#838381] items-center gap-2">
+          <img src="lock-alt-svgrepo-com.svg" alt="" /><span>Lock chat</span>
+        </div>
+        <div class="flex text-[#838381] items-center gap-2">
+          <img src="close-ellipse-svgrepo-com.svg" alt="" /><span
+            >Close window chat</span
+          >
+        </div>
+        <hr class="border-1 border-black my-2" />
+        <div class="flex text-[#838381] items-center gap-2">
+          <img src="minus-round-svgrepo-com.svg" alt="" /><span
+            >Clear chat</span
+          >
+        </div>
+        <div class="flex text-[#838381] items-center gap-2">
+          <img src="delete-svgrepo-com.svg" alt="" /><span>Delete</span>
+        </div>
+      </div>
+      <div class="flex-1 p-6 overflow-y-auto space-y-4">
+        <div class="flex justify-start">
+          <div class="bg-[#1e2527] rounded-lg p-3 max-w-md">
+            <p class="text-[#25d366] text-sm break-all">
+              https://drive.google.com/file/d/1-e701a1-LccANpnxXFq3rmyQI-OI-r/view?usp=sharing&resourcekey=0-RAfn1vTRIVMKlgcLlzrOrQ0-0TgTcHeotmHs4TgCA87gN4gv2ANy2HTIP3r5bATHUAP2ugcsmPm0kJMAABgqBfnB5CzCbzA2a
+            </p>
+            <p class="text-[#25d366] text-sm break-all mt-1">
+              Rcy-uCr2KksUMD9cXbAw2vA-tnSTfHdOaGUZqxcPudsb8cqc3uABckRaLATH1UJAPvPUIqBBNQwPQIMAABmP-qcB-rlH0zNaALxuEw2O1VO4ivoOSbA2XqrYBcr8r1suQ1OGP8d20kTyLNYecK1aTfHZgwAAkMGKUcI81xF21&2cCjxU1uF
+            </p>
+            <p class="text-[#25d366] text-sm break-all mt-1">
+              DDHnTn_rkK5K2N4uU1oOGrUDGoLR8nPuI6QZQ_een_Apqz-CaenocU1062GA
+            </p>
+            <span class="text-xs text-[#667781] block mt-1">14:01</span>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <span class="bg-[#1e2527] text-[#838381] text-xs px-3 py-1 rounded-lg"
+            >14.01.2025</span
+          >
+        </div>
+        <div class="flex justify-end">
+          <div class="bg-[#095e54] rounded-lg p-3 max-w-md">
+            <p class="text-white text-sm">Help</p>
+            <div class="flex items-center gap-1 justify-end mt-1">
+              <span class="text-xs text-[#a8ddd3]">14:56</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <span class="bg-[#1e2527] text-[#838381] text-xs px-3 py-1 rounded-lg"
+            >22.01.2025</span
+          >
+        </div>
+        <div class="flex justify-start">
+          <div class="bg-[#1e2527] rounded-lg p-3 max-w-md">
+            <p class="text-[#25d366] text-sm break-all">
+              https://www.instagram.com/p/DEsqwU1dS0J/?igsh=MXQzcldHUkYsTjN18
+            </p>
+            <span class="text-xs text-[#667781] block mt-1">20:13</span>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <span class="bg-[#1e2527] text-[#838381] text-xs px-3 py-1 rounded-lg"
+            >23.01.2025</span
+          >
+        </div>
+        <div class="flex justify-end">
+          <div class="bg-[#095e54] rounded-lg overflow-hidden max-w-md">
+            <div class="bg-[#1e2527] p-4 flex items-center gap-3">
+              <div class="bg-purple-900/30 p-3 rounded">
+                <svg
+                  class="w-8 h-8 text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"
+                  />
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-white text-sm font-medium truncate">
+                  ~The Practical Guide to Design Theory~ Lindsey Marsh.pdf
+                </p>
+                <p class="text-[#838381] text-xs">PDF • 138 кБ</p>
+              </div>
+            </div>
+            <div class="px-3">
+              <p class="text-white text-sm mt-5">Открыть</p>
+              <div class="flex items-center gap-1 justify-end">
+                <span class="text-xs text-[#a8ddd3]">14:56</span>
+                <img
+                  src="check-good-yes-svgrepo-com.svg"
+                  alt=""
+                  class="w-4 h-4"
+                  style="filter: brightness(0) invert(0.8); width: 16px;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#1e1f1f] p-4 border-t border-[#2c2d2d]">
+        <div class="bg-[#2c2d2d] rounded-lg flex items-center px-4 py-2 gap-3">
+          <img
+            src="add-plus-circle-svgrepo-com.svg"
+            alt=""
+            class="w-6 h-6"
+          />
+          <input
+            type="text"
+            placeholder="Введите сообщение"
+            class="flex-1 bg-transparent text-white outline-none"
+          />
+          <img src="microphone-alt-svgrepo-com.svg" alt="" class="w-6 h-6" />
+        </div>
+      </div>
+    </section>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu-overlay");
+      const rbtn = document.getElementById("r-menu-btn");
+      const rmenu = document.getElementById("r-menu-overlay");
+
+      btn.onclick = () => {
+        menu.classList.toggle("hidden");
+      };
+
+      rbtn.onclick = () => {
+        rmenu.classList.toggle("hidden");
+      };
+    </script>
+  </body>
+</html>
